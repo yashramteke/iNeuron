@@ -9,17 +9,7 @@ int main(int argc, char *argv[])
     printf("Enter three digit number = ");
     scanf("%d", &num);
 
-    temp = num;
-
-    while (temp != 0)
-    {
-        rem = temp % 10;
-        temp = temp / 10;
-    }
-
-    num = num - (rem * 100);
-    num = num * 10 + rem;
-
-    printf("\nDigit rotate towards right  = %d", num);
+    printf("\nDigit rotate towards right  = %d", (num % 10 )* 100 +  (num / 10));
+    
     return 0;
 }
